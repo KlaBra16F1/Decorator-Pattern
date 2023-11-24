@@ -6,6 +6,11 @@ public class Grappa implements Getränk{
     public static double preisInfo() {
         return preis;
     }
+    private static int kalorien = 221;
+    
+    public int getKalorien() {
+        return kalorien + g.getKalorien();
+    }
 
     public Grappa(Getränk g) {
         this.g = g;

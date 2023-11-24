@@ -4,6 +4,11 @@ import Shop.Getränk;
 public class Schokolade implements Getränk{
     Getränk g;
     private static double preis = 0.90;
+    private static int kalorien = 279;
+    
+    public int getKalorien() {
+        return kalorien + g.getKalorien();
+    }
     public static double preisInfo() {
         return preis;
     }

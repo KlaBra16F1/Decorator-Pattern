@@ -3,6 +3,11 @@ import Shop.Getränk;
 public class Milch implements Getränk{
     Getränk g;
     private static double preis = 0.40;
+    private static int kalorien = 42;
+    
+    public int getKalorien() {
+        return kalorien + g.getKalorien();
+    }
 
     public static double preisInfo() {
         return preis;

@@ -50,7 +50,7 @@ public class Bestellung {
 
 
         } while (weiter);
-        System.out.printf("Ihr %s kostet %.2f Euro",bestellung, auswahl.getPreis());
+        System.out.printf("Ihr %s kostet %.2f Euro und hat %d Kalorien",bestellung, auswahl.getPreis(),auswahl.getKalorien());
 
     }
 

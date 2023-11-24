@@ -29,9 +29,10 @@ public class Bestellung {
             
                 default:
                     System.out.println(choice+" haben wir leider nicht.");
+                    auswahl = null;
                     break;
             }
-            bestellung += auswahl.getClass().getSimpleName();
+            bestellung +=  (auswahl == null) ? "" : auswahl.getClass().getSimpleName();
             
             if (auswahl != null ) {
                 System.out.printf("Sie haben einen %s bestellt. Möchten sie noch eine etwas dazu? (j/n) ", bestellung);
@@ -44,7 +45,7 @@ public class Bestellung {
                 }
 
             } else {
-                System.out.println("Möchten sie weiter bestellen? (j/n)");
+                System.out.print("Möchten sie weiter bestellen? (j/n) ");
                 weiter = (input.nextLine().equals("n")) ?  false :  true;
             }
 
@@ -80,7 +81,7 @@ public class Bestellung {
                     break;
             }
             bestellung += auswahl.getClass().getSimpleName();
-            System.out.println("Möchten sie eine weitere Zutat? (j/n)");
+            System.out.print("Möchten sie eine weitere Zutat? (j/n) ");
             weiter = (input.nextLine().equals("n")) ?  false :  true;
         } while (weiter);
     }
